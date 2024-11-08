@@ -1,0 +1,386 @@
+/*-- scss:defaults --*/
+
+// Define colors (https://doimspp.sharepoint.com/sites/fws-FF09R00000/SitePages/Comms-Visual-Identity-Landing.aspx)
+
+$blue: #02426D;
+$white: #FFFFFF;
+$light-blue: #4e7b99;
+$accent-blue: #007AC2;
+$accent-light-blue: #D1EDFF;
+$accent-yellow: #FFC94F;
+$accent-dark-blue: #012137;
+$accent-orange: #F7885A;
+$accent-yellow2: #FFE4A7;
+$accent-champagne: #E9D3AD;
+$accent-green: #265D3A;
+$accent-light-green: #BACF8C;
+$accent-brown: #A09B81;
+$accent-dark-grey: #666666;
+$transparent: #00000000;
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+
+// Import fonts (https://doimspp.sharepoint.com/sites/fws-FF09R00000/SitePages/Comms-Visual-Identity-Landing.aspx)
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap&family=Eater&display=swap');
+
+
+// Define fonts
+
+$lato: "Lato", sans-serif;
+
+
+// Colors
+
+$body-color: $blue !default;
+$link-color: $light-blue !default;
+$selection-bg: $accent-green !default;
+$presentation-heading-color: $blue !default;
+
+
+// Fonts
+
+$font-family-sans-serif: $lato !default;
+$presentation-heading-font: $lato !default;
+$presentation-font-size-root: 32px;
+
+
+/*-- scss:rules --*/
+
+// Hyperlinks
+
+.reveal a {
+  line-height: 1.5em;
+}
+
+
+// Paragraphs
+
+.reveal p {
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+
+// Footnotes
+
+.reveal .slide aside .aside-footnotes {
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+
+// Font sizes
+
+.small {
+  font-size: 0.8em;
+  }
+.smaller {
+  font-size: 0.5em;
+  }
+.tiny {
+  font-size: 0.2em;
+}
+.large {
+  font-size: 1.50em;
+}
+.larger {
+  font-size: 3.0em;
+}
+
+
+// Title and headings
+
+#title-slide {
+  text-align: left;
+
+  .title {
+    color: $body-color;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    color: $light-blue;
+    font-style: italic;
+    margin-top: 0em;
+    font-weight: 400;
+  }
+  
+  .date {
+    color: $body-color;
+    font-weight: 300;
+    margin-top: 2em;
+    font-size: 0.6em;
+  }
+
+  .institute,
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    font-style: italic;
+    font-weight: 300;
+    color: $body-color;
+  }
+
+  .author,
+  .quarto-title-author-name {
+    color: $body-color;
+  }
+
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+
+    .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+    }
+  }
+}
+
+
+// Headers
+
+.reveal h2 {
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+.reveal h3 {
+  color: $light-blue;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.95em;
+}
+
+.reveal h4 {
+  color: $light-blue;
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+
+// Alerts etc.
+
+.alert {
+  color: $accent-orange;
+}
+
+.fg {
+  color: var(--col, $accent-dark-blue);
+}
+
+.bg {
+  background-color: var(--col, $accent-dark-grey);
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+// Lists
+
+// Unordered lists
+
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: mix($light-blue, $white, 70%);
+  }
+}
+
+.reveal ul ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($light-blue, $white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+
+// Ordered lists
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: $light-blue;
+  }
+}
+
+
+// Move "hamburger" menu button to top right
+
+.reveal .slide-menu-button {
+  position: fixed;
+  top: 6px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-menu-button > * {
+  pointer-events: auto;
+}
+
+
+// Same for chalkboard buttons (with an offset)
+
+.reveal .slide-chalkboard-buttons {
+  position: fixed;
+  top: 12px;
+  right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.reveal .slide-chalkboard-buttons > * {
+  pointer-events: auto;
+}
+
+
+// Beamer-style button link environment
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+  color: $white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: $accent-dark-blue;
+  border-color: $accent-dark-blue;
+}
+
+.button::before {
+  content: "▶";
+  margin-right: 5px;
+}
+
+
+// Tables
+
+// Headers for DT::datatable()
+.custom-header {
+  color: black;
+  background-color: white;
+  font-size: 0.5em;
+}
+
+.reveal table {
+  // height: auto; /* Adjust table width to fit content up to the available slide space */
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.8em;
+}
+
+.reveal table th,
+.reveal table td {
+  border: none; /* Remove internal row lines */
+  padding: .23em; /* Adjust padding as needed */
+  text-align: left; /* Adjust text alignment as needed */
+  font-weight: lighter; /* Lighter font weight for main table text */
+}
+
+/* Adds a bottom border to the table header row for distinction */
+.reveal table thead th,
+.reveal .slides table tr:last-child td,
+.reveal .slides table {
+  border-bottom: 2px solid #D3D3D3; /* Dark grey color for the bottom border */
+}
+
+/* Make column headers bold */
+.reveal table thead th {
+  font-weight: bold;
+}
+
+/* Styling table captions */
+.reveal table caption {
+  color: $accent-dark-grey; /* Dark grey color for the caption */
+  font-variant: small-caps; /* Use small caps for the caption text */
+}
+
+// Special catch for etable environment to ensure these table images don't overflow the slide.
+// See: https://lrberge.github.io/fixest/articles/etable_new_features.html
+
+.etable {
+  width: 100%;
+  height: calc(100% - 3em); /* Adjust 3em based on the height of your header, if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etable img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+// Centering text and figures
+
+// center text
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+// Center an inline image horizontally
+.center-inline {
+  margin: 0!important;}
+
+// Center text vertically and horizontally
+.center-xy {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%), translateX(-50%);
+  transform: translateY(-50%), translateX(-50%);
+}
+
+// Center text in a column
+.center-xy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+
+// Add shadow to figures 
+.shadow {
+  fig-align: "center";
+  border-radius: 5px;
+  box-shadow: 4.2px 4.5px 2.5px rgba(65, 65, 65, 0.737);
+}

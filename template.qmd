@@ -1,0 +1,71 @@
+---
+title: A title
+subtitle: A subtitle
+title-slide-attributes: 
+  data-background-color: "#ebe0da"
+format: refuge-revealjs
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Joe Biologist
+    email: joe_biologist@fws.gov
+    affiliations: Kodiak National Wildlife Refuge
+  - name: Jane Biologist
+    email: jane_biologist@fws.gov
+    affiliations: Kodiak National Wildlife Refuge
+date: today
+logo: images/nwrs_logo.png
+---
+
+## Example slide
+
+### This is a subtitle
+
+Here we have some text that may run over several lines of the slide frame,
+depending on how long it is.
+
+- first item 
+    - A sub item
+
+Next, we'll brief review some theme-specific components.
+
+- Note that _all_ of the standard Reveal.js
+[features](https://quarto.org/docs/presentations/revealjs/)
+can be used with this theme, even if we don't highlight them here.
+
+## Additional theme classes
+
+### Some extra things you can do with the clean theme
+
+Special classes for emphasis
+
+- `.alert` class for default emphasis, e.g. [important note]{.alert}.
+- `.fg` class for custom color, e.g. [important note]{.fg style="--col: #e64173"}.
+- `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}.
+
+Cross-references
+
+- `.button` class provides a Beamer-like button, e.g.
+[[Summary]{.button}](#sec-summary)
+
+## A different colored background {background-color="#D1EDFF"}
+
+## Summary {#sec-summary}
+
+### A Refuge presentation theme
+
+Here are some options to get you started using the FWS Refuge Quarto reveal.js theme:
+
+Add the theme to an existing project.
+
+```{.bash}
+quarto install extension USFWS/refuge-quarto-revealjs
+```
+
+... or, create a new project using this slide deck as a template.
+
+```{.bash}
+quarto use template USFWS/refuge-quarto-revealjs
+```
+

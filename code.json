@@ -1,0 +1,49 @@
+[
+  {
+    "name": "refuge-quarto-revealjs",
+    "organization": "U.S. Fish & Wildlife Service",
+    "description": "A Quarto Revealjs template for presentation by NWRS staff",
+    "version": "0.1.0",
+    "status": "Development",
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain, CC0-1.0",
+          "URL": "https://github.com/USFWS/refuge-quarto-revealjs/blob/main/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://github.com/USFWS/refuge-quarto-revealjs",
+    "downloadURL": "https://github.com/USFWS/refuge-quarto-revealjs/archive/refs/heads/main.zip",
+    "disclaimerURL": "https://github.com/USFWS/refuge-quarto-revealjs/blob/main/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/USFWS/refuge-quarto-revealjs.git",
+    "vcs": "git",
+
+    "laborHours": 4,
+
+    "tags": [
+      "r7",
+      "usfws"
+    ],
+
+    "languages": [
+      "r",
+      "qmd",
+      "md",
+      "scss",
+      "css"
+    ],
+
+    "contact": {
+      "name": "McCrea Cobb",
+      "email": "mccrea_cobb@fws.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2024-11-07"
+    }
+  }
+]
