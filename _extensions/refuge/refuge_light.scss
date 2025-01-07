@@ -380,10 +380,18 @@ img.drop {
   }
 }
 
+// Slide number and footer formatting
 .reveal .footer {
   color:$light-blue;
 }
+.reveal .slide-number {
+  color: $light-blue;
+}
 
+// Remove slide number and footer from title slide
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
 .reveal .footer > a[href*='title-slide'] {
   display: none;
 }
