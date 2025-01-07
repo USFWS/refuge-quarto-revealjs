@@ -49,7 +49,7 @@ Cross-references
 - `.button` class provides a Beamer-like button, e.g.
 [[Summary]{.button}](#sec-summary)
 
-## A different colored background {background-color="#D1EDFF"}
+## A dark background {.dark}
 
 ## Summary {#sec-summary}
 
