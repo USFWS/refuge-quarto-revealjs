@@ -2,7 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rproj
 
 .DS_Store
-# template.html
+template.html
 template_files/
+README.html

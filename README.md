@@ -1,11 +1,10 @@
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
-Refuge Quarto Revealjs
-=======================
-
-## Overview
+# Refuge Quarto Revealjs
 
 A National Wildlife Refuge System presentation theme for Quarto Reveal.js, inspired by Grant McDermott's clean revealjs template [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean).
+
+![](images/title_slide.png){fig-alt="A screenshot of the Refuge Quarto Revealjs title slide."}
 
 ## Usage
 
@@ -30,11 +29,11 @@ quarto use template USFWS/refuge-quarto-revealjs
 
 ## Getting help
 
-Contact the [project maintainer](emailto:mccrea_cobb@fws.gov) for help with this repository. 
+Contact the [project maintainer](mailto:mccrea_cobb@fws.gov) for help with this repository. 
 
 ## Contribute
 
-Contact the project maintainer for information about contributing to this repository. Submit a [GitHub Issue](https://github.com/USFWS/r7-repo-template/issues) to report a bug or request a feature or enhancement.
+Contact the project maintainer for information about contributing to this repository. Submit a [GitHub Issue](https://github.com/USFWS/refuge-quarto-revealjs/issues) to report a bug or request a feature or enhancement.
 
 -----
 
