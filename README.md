@@ -4,7 +4,7 @@
 
 A National Wildlife Refuge System presentation theme for Quarto Reveal.js, inspired by Grant McDermott's clean revealjs template [quarto-revealjs-clean](https://github.com/grantmcdermott/quarto-revealjs-clean).
 
-![](images/title_slide.png){fig-alt="A screenshot of the Refuge Quarto Revealjs title slide."}
+![](images/title_slide.png "A screenshot of the Refuge Quarto Revealjs title slide.")
 
 ## Usage
 
