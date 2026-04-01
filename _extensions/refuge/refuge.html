@@ -1,0 +1,38 @@
+<script type="text/javascript">
+(function () {
+  function getLogo() {
+    return document.querySelector('div.has-logo > img.slide-logo, .slide-logo');
+  }
+
+  function isTitleSlide(event) {
+    return event && event.indexh === 0 && (!('indexv' in event) || event.indexv === 0);
+  }
+
+  function updateDeckChrome(event) {
+    const logo = getLogo();
+    const onTitle = isTitleSlide(event);
+
+    Reveal.configure({ slideNumber: onTitle ? null : 'c' });
+
+    if (logo) {
+      logo.style.display = onTitle ? 'none' : '';
+    }
+  }
+
+  window.addEventListener('load', function () {
+    const logo = getLogo();
+    if (!logo) return;
+
+    const url = logo.getAttribute('data-url');
+    if (url) {
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', function () {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    }
+  });
+
+  Reveal.on('ready', updateDeckChrome);
+  Reveal.on('slidechanged', updateDeckChrome);
+})();
+</script>
